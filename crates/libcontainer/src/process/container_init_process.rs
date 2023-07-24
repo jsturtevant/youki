@@ -631,9 +631,9 @@ pub fn container_init_process(
         tracing::warn!("seccomp not available, unable to set seccomp privileges!")
     }
 
-    if let Some(args) = proc.args() {
-        verify_binary(args, &envs)?;
-    }
+    // if let Some(args) = proc.args() {
+    //     verify_binary(args, &envs)?;
+    // }
 
     // Notify main process that the init process is ready to execute the
     // payload.  Note, because we are already inside the pid namespace, the pid
